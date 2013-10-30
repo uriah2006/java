@@ -31,6 +31,9 @@ public class lowest_value {
 		System.out.println("the lowest value in the array is:" + lowest(array));
 	}
 
+	
+	
+	//makes sure the array is sorted and returns the lowest value;
 	private static int lowest(int[] array) {
 		array = bubbleSort(array);
 		return ((array[0] < array[array.length - 1]) ? array[0]
@@ -38,7 +41,7 @@ public class lowest_value {
 
 	}
 
-	// yeah i know its is slow but it is not what i am focused on
+	//bubble sort for int[] lowest to highest
 	private static int[] bubbleSort(int[] array) {
 		int sorted = 1;
 		int temp;
