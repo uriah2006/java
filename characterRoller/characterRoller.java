@@ -15,9 +15,12 @@
  * 
  */
 
+package characterRoller;
+
 import javax.swing.JFrame;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+
 import java.awt.GridLayout;
 import java.awt.Color;
 import java.awt.Container;
@@ -25,15 +28,21 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowAdapter;
+
 import javax.swing.JOptionPane;
 
 public class characterRoller extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JButton button, button2;
 	private JLabel label, label2;
 	private boolean toggle, toggle2;
 
 	public static void main(String[] args) {
+		@SuppressWarnings("unused")
 		characterRoller lab = new characterRoller();
 	}
 

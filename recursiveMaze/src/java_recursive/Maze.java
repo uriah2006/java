@@ -1,10 +1,11 @@
+package java_recursive;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.Scanner;
 
 public class Maze {
 	private int			row, col;
-	private char		wall, space;
+	private char		wall;
 	private char[][]	map	= new char[row][col];
 	
 	public Maze(int row, int col, char wall, char space) {
@@ -17,7 +18,6 @@ public class Maze {
 		this.row = row;
 		this.col = col;
 		this.wall = wall;
-		this.space = space;
 		map = new char[row][col];
 	}
 	
@@ -44,6 +44,8 @@ public class Maze {
 				map[r][c] = (mazeFile.next()).charAt(0);
 			}
 		}
+		mazeFile.close();
+		input.close();
 	}
 	
 	public void printMaze() {
@@ -109,6 +111,7 @@ public class Maze {
 				}
 				
 			}
+			input.close();
 			// /////////////////////////////////////for/////fun////////////////////////////////////
 		}
 		if ((currentc >= 0) && (currentc < col) && (currentr >= 0)
@@ -144,6 +147,7 @@ public class Maze {
 							+ ", here is your map out");
 					rightWay = true;
 				}
+				input.close();
 			}
 			// ///////////////////////////for//fun/////////////////////////////////////////
 			// down
